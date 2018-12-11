@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+   <bean id="employee" class="com.vijay.passDataTypes.Employee">
+    <property name="name" value="vj"></property>
+    <property name="id" value="978804"></property>
+    <property name="salary" value="20000"></property>
+    <property name="address" ref="address"></property>
+    </bean>
+    
+    <bean id="company" class="com.vijay.passDataTypes.Company">
+    <property name="companyName" value="TCS"></property>
+    <property name="companyID" value="741256"></property>
+    <property name="revenue" value="200000.768"></property>
+    <property name="address" ref="address"></property>
+    </bean>
+    
+    <bean id="address" class="com.vijay.passDataTypes.Address">
+    <property name="streetNo" value="100"></property>
+    <property name="locality" value="ekya"></property>
+    </bean>
+    
+    <bean id="check1" class="com.vijay.passDataTypes.ConstructorCheck">
+    	<constructor-arg name="a" value="100"></constructor-arg>
+    	<constructor-arg name="b" value="string"></constructor-arg>
+    	<constructor-arg name="c" value="1000"></constructor-arg>
+    	<constructor-arg name="address" ref="address"></constructor-arg>
+    </bean>
+    
+    <bean id="check2" class="com.vijay.passDataTypes.ConstructorCheck">
+    	<constructor-arg name="a" value="200"></constructor-arg>
+    	<constructor-arg name="c" value="2000"></constructor-arg>
+    	<constructor-arg name="address" ref="address"></constructor-arg>
+    </bean>
+    
+</beans>
